@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FlashMe</string>
+    <string name="question">What is the best Mobile Dev Course?</string>
+    <string name="answer">CodePath!</string>
+
+
+</resources>
