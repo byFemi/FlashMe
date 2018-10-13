@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
+        //second on click listener to toggle between views
         findViewById(R.id.flashcard_answer).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
