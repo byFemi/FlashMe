@@ -9,24 +9,79 @@
     <!--comment-->
     <TextView
         android:id="@+id/flashcard_answer"
+        android:background="@drawable/card_background2"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:text="@string/answer"
         android:gravity="center"
         android:textSize="40sp"
-        android:visibility="invisible"/>
+        android:visibility="invisible"
+        android:textColor="#FFFFFF"
+        />
+
 
     <TextView
         android:id="@+id/flashcard_question"
+        android:background="@drawable/card_background"
+        android:elevation="7dp"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="230dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:text="@string/question"
         android:gravity="center"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        android:textColor="#FFFFD5"
+        />
+
+    <TextView
+        android:id="@+id/answer1"
+        android:background="@drawable/card_background2"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/flashcard_question"
+        android:text="@string/answer1"
+        android:gravity="center"
+        android:textSize="30sp"
+        />
+    <TextView
+        android:id="@+id/answer2"
+        android:background="@drawable/card_background2"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/answer1"
+        android:text="@string/answer2"
+        android:gravity="center"
+        android:textSize="30sp"
+        />
+    <TextView
+        android:id="@+id/answer3"
+        android:background="@drawable/card_background2"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/answer2"
+        android:text="@string/answer3"
+        android:gravity="center"
+        android:textSize="30sp"
+        />
+
+    <ImageView
+        android:id="@+id/toggle_choices_visibility"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:gravity="center"
+        android:src="@drawable/hide_icon_a"/>
+        <!--android:src="@mipmap/hide_icon"-->
+
+
 
 
 </RelativeLayout>

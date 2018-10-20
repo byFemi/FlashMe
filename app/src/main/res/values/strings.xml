@@ -1,7 +1,10 @@
 <resources>
-    <string name="app_name">FlashMe</string>
-    <string name="question">What is the best Mobile Dev Course?</string>
-    <string name="answer">CodePath!</string>
 
+    <string name="app_name">FlashMe</string>
+    <string name="question">Which is the best Mobile Dev Course?</string>
+    <string name="answer">CodePath!</string>
+    <string name="answer1">CodeWay</string>
+    <string name="answer2">CodePath</string>
+    <string name="answer3">PasswordPath</string>
 
 </resources>
