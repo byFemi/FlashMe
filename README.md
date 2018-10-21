@@ -7,7 +7,7 @@ This is a rich and exquisite flashcard application that allows one to review any
 
 ### App Walk-though
 
-<img src="https://i.imgur.com/jpG4zpX.gif" width=200><br>
+
 <img src="https://i.imgur.com/NVoTYgf.gif" width=200><br>
 
 
