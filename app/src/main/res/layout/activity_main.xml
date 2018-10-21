@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/app_background"
     tools:context=".MainActivity">
 
-    <!--comment-->
+    <!--android:background="@color/softGray"-->
     <TextView
         android:id="@+id/flashcard_answer"
         android:background="@drawable/card_background2"
@@ -19,6 +20,7 @@
         android:textSize="40sp"
         android:visibility="invisible"
         android:textColor="#FFFFFF"
+        android:elevation="5dp"
         />
 
 
@@ -33,7 +35,9 @@
         android:text="@string/question"
         android:gravity="center"
         android:textSize="40sp"
-        android:textColor="#FFFFD5"
+        android:textColor="#FFFFFF"
+
+
         />
 
     <TextView
@@ -46,6 +50,8 @@
         android:text="@string/answer1"
         android:gravity="center"
         android:textSize="30sp"
+        android:elevation="5dp"
+        android:textColor="#FFFFFF"
         />
     <TextView
         android:id="@+id/answer2"
@@ -57,6 +63,8 @@
         android:text="@string/answer2"
         android:gravity="center"
         android:textSize="30sp"
+        android:elevation="5dp"
+        android:textColor="#FFFFFF"
         />
     <TextView
         android:id="@+id/answer3"
@@ -68,17 +76,23 @@
         android:text="@string/answer3"
         android:gravity="center"
         android:textSize="30sp"
+        android:elevation="5dp"
+        android:textColor="#FFFFFF"
         />
 
     <ImageView
         android:id="@+id/toggle_choices_visibility"
+        android:contentDescription="@string/toggleDescription"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="18dp"
         android:gravity="center"
-        android:src="@drawable/hide_icon_a"/>
+        android:elevation="5dp"
+        android:src="@drawable/hide_icon_a"
+
+        />
         <!--android:src="@mipmap/hide_icon"-->
 
 
