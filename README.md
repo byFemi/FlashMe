@@ -4,12 +4,11 @@ First Codepath Lab, building a Flashcard app
 
 ### App Description
 This is a rich and exquisite flashcard application that allows one to review any content using flashcards! FlashMe!
+Multiple choice questions were added to augment the challenge of a each quesiton, giving you more questions to review.
 
 ### App Walk-though
 
-
 <img src="https://i.imgur.com/NVoTYgf.gif" width=200><br>
-
 
 ## Required
 - [x] Create New Project in Android Studio
