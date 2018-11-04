@@ -92,8 +92,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == 100) { // this 100 needs to match the 100 we used when we called startActivityForResult!
-            String newQuestion = data.getExtras().getString("newQuestion"); // 'string1' needs to match the key we used when we put the string in the Intent
+        if (requestCode == 100 && data != null) { // code 100, and the textfields aren't empty
+            String newQuestion = data.getExtras().getString("newQuestion"); // '
             String newAnswer = data.getExtras().getString("newAnswer");
             ((TextView) findViewById(R.id.flashcard_question)).setText(newQuestion);
             ((TextView) findViewById(R.id.flashcard_answer)).setText(newAnswer);
