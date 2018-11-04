@@ -81,8 +81,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.plus_sign).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
-                MainActivity.this.startActivityForResult(intent, 100);
+                Intent intent = new Intent(MainActivity.this, AddCardActivity.class); //starts intent for communication between main and addcard
+                MainActivity.this.startActivityForResult(intent, 100);  //begins to listen on request code 100
             }
         });
 
@@ -93,8 +93,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 100 && data != null) { // code 100, and the textfields aren't empty
-            String newQuestion = data.getExtras().getString("newQuestion"); // '
-            String newAnswer = data.getExtras().getString("newAnswer");
+            String newQuestion = data.getExtras().getString("newQuestion"); // gets string from users question
+            String newAnswer = data.getExtras().getString("newAnswer"); // gets string from users answer
             ((TextView) findViewById(R.id.flashcard_question)).setText(newQuestion);
             ((TextView) findViewById(R.id.flashcard_answer)).setText(newAnswer);
 
