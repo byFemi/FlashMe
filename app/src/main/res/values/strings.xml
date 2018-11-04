@@ -7,5 +7,10 @@
     <string name="answer2">CodePath</string>
     <string name="answer3">PasswordPath</string>
     <string name="toggleDescription">This button will toggle the multiple choice answer views</string>
+    <string name="closeDescription">This button will close the add cards screen</string>
+    <string name="saveDescription">This button will save each of the cards</string>
+    <string name="hint_question">Enter your question to here</string>
+    <string name="hint_answer">Enter your answer to that question </string>
+
 
 </resources>

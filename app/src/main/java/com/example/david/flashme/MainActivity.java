@@ -1,8 +1,10 @@
 package com.example.david.flashme;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     //toggle value for showing answer list
@@ -74,7 +76,28 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        //switch activity when the plus button is pressed, to the add card activity.
+        findViewById(R.id.plus_sign).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
+                MainActivity.this.startActivityForResult(intent, 100);
+            }
+        });
+
+
+
+    }//onCreate
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 100) { // this 100 needs to match the 100 we used when we called startActivityForResult!
+            String newQuestion = data.getExtras().getString("newQuestion"); // 'string1' needs to match the key we used when we put the string in the Intent
+            String newAnswer = data.getExtras().getString("newAnswer");
+            ((TextView) findViewById(R.id.flashcard_question)).setText(newQuestion);
+            ((TextView) findViewById(R.id.flashcard_answer)).setText(newAnswer);
+
+        }
     }
-
-
 }
