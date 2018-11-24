@@ -6,22 +6,58 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     //toggle value for showing answer list
     boolean isShowingAnswers = false;
+
+    FlashcardDatabase flashcardDatabase; //create instance of databse to read and write to
+    List<Flashcard> allFlashcards;
+
+    int currentCardDisplayedIndex = 0;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-    // First on click listener to toggle between flashcard answer and question
+        flashcardDatabase = new FlashcardDatabase(getApplicationContext());
+        allFlashcards = flashcardDatabase.getAllCards();
+
+        if(allFlashcards != null && allFlashcards.size() > 0) {
+            ((TextView)findViewById(R.id.flashcard_question)).setText(allFlashcards.get(0).getQuestion());
+            ((TextView)findViewById(R.id.flashcard_answer)).setText(allFlashcards.get(0).getAnswer());
+        }
+        //On click listener to display next card
+        findViewById(R.id.next_button).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                //advance the pointer index so we can show the next card
+                currentCardDisplayedIndex++;
+
+                //make sure we don't get an IndexOutOfBoundError if we are viewing last indexed card
+                if(currentCardDisplayedIndex > allFlashcards.size() -1){
+                    currentCardDisplayedIndex = 0; //wrap around to beginning
+                }
+
+                ((TextView)findViewById(R.id.flashcard_answer)).setText(allFlashcards.get(currentCardDisplayedIndex).getAnswer());
+                ((TextView)findViewById(R.id.flashcard_question)).setText(allFlashcards.get(currentCardDisplayedIndex).getQuestion());
+
+
+
+            }
+        });
+
+        // First on click listener to toggle between flashcard answer and question
         findViewById(R.id.flashcard_question).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 findViewById(R.id.flashcard_question).setVisibility(View.INVISIBLE);
                 findViewById(R.id.flashcard_answer).setVisibility(View.VISIBLE);
-
-
             }
         });
         //second on click listener to toggle between flashcard answer and question
@@ -95,9 +131,12 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == 100 && data != null) { // code 100, and the textfields aren't empty
             String newQuestion = data.getExtras().getString("newQuestion"); // gets string from users question
             String newAnswer = data.getExtras().getString("newAnswer"); // gets string from users answer
+
             ((TextView) findViewById(R.id.flashcard_question)).setText(newQuestion);
             ((TextView) findViewById(R.id.flashcard_answer)).setText(newAnswer);
 
+            flashcardDatabase.insertCard(new Flashcard(newQuestion, newAnswer));
+            allFlashcards = flashcardDatabase.getAllCards();
         }
     }
 }
