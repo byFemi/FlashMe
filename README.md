@@ -6,7 +6,7 @@
 This is a rich and exquisite flashcard application that allows one to review any content using flashcards! FlashMe!
 Multiple choice questions were added to augment the challenge of a each quesiton, giving you more questions to review.
 
-### App Walk-though
+### App Walk-through
 
 
 <img src="https://i.imgur.com/eZzqaRG.gif" width=200><br>
@@ -29,7 +29,7 @@ Multiple choice questions were added to augment the challenge of a each quesiton
 This is a rich and exquisite flashcard application that allows one to review any content using flashcards! FlashMe!
 Multiple choice questions were added to augment the challenge of a each quesiton, giving you more questions to review.
 
-### App Walk-though
+### App Walk-through
 <img src="https://i.imgur.com/LQo5Pdk.gif" width=200><br>
 
 
@@ -58,7 +58,7 @@ First Codepath Lab, building a Flashcard app
 This is a rich and exquisite flashcard application that allows one to review any content using flashcards! FlashMe!
 Multiple choice questions were added to augment the challenge of a each quesiton, giving you more questions to review.
 
-### App Walk-though
+### App Walk-through
 
 <img src="https://i.imgur.com/NVoTYgf.gif" width=200><br>
 
