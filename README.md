@@ -7,13 +7,13 @@ Multiple choice questions were added to augment the challenge of a each quesiton
 
 ### App Walk-though
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
+<img src="https://i.imgur.com/aWOdBI0.gif" width=200><br>
 
 
 ## Required
 - [x] User sees a transition animation when going from the main screen to the add card screen.
 - [x] User sees a reveal animation when the flashcard is tapped and the answer is shown
-- [ ] User sees flashcards animating in / out when the 'next' button is tapped
+- [x] User sees flashcards animating in / out when the 'next' button is tapped
 
 ## Optional
 - [ ] Extra styling is added!
